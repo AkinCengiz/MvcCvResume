@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MvcCvResume.Entities.Abstract;
+
+namespace MvcCvResume.Entities.Concrete;
+public class BaseModel : IEntity
+{
+    public int Id { get; set; }
+    public DateTime CratedDate { get; set; }
+    public bool IsDeleted { get; set; }
+}
