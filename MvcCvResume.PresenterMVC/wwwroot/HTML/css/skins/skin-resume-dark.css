@@ -7185,8 +7185,14 @@ html.boxed .body {
 /*
 * Text Color
 */
+.custom-text-color-1 {
+	color: #db253b !important;
+}
+.custom-text-color-2 {
+	color: #DB253B !important;
+}
 .custom-text-color-3 {
-	color: #c7ecff !important;
+	color: #DB253B !important;
 }
 /*
 * Buttons
