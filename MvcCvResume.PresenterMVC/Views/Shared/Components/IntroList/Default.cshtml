@@ -1,0 +1,95 @@
+﻿<div id="about-me">
+    <section class="section section-no-border section-parallax bg-transparent custom-section-padding-1 custom-position-1 custom-xs-bg-size-cover parallax-no-overflow m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="/HTML/img/demos/resume/about-me/taraftar2.jpg">
+        @foreach (var a in Model)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 position-relative custom-sm-margin-bottom-1">
+                        <img src="/HTML/img/demos/resume/about-me/@a.ImageUrl" class="img-fluid custom-border custom-image-position-2 custom-box-shadow-4" alt />
+                    </div>
+                    <div class="col-lg-6 col-xl-5">
+                        <h1 class="text-color-primary custom-font-size-1">@a.FirstName @a.LastName.ToUpper()</h1>
+                        <p class="text-color-light font-weight-normal custom-font-size-2 custom-margin-bottom-1">@a.Profession</p>
+                        <span class="custom-about-me-infos">
+                            <span class="text-color-primary font-weight-bold text-uppercase">@a.Graduation</span>
+                            <span class="text-color-primary font-weight-bold text-uppercase mb-3">Information Technology &amp; Services</span>
+                            <span class="custom-text-color-3 text-uppercase">
+                                <strong class="text-color-light">Previous: </strong>
+                                Front-End Developer at Porto
+                                <a data-hash href="#experience" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-1 ms-2">Devamı...</a>
+                            </span>
+                            @await Component.InvokeAsync("EducationIntro")
+                        </span>
+                    </div>
+                    <div class="col-lg-2 col-xl-3 d-none d-lg-block">
+                        <img src="/HTML/img/demos/resume/about-me/sfw2.jpeg" custom-anim class="img-fluid custom-image-pos-1" alt style="opacity:.5" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <ul class="social-icons custom-social-icons">
+            <li class="social-icons-facebook">
+                <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="social-icons-twitter">
+                <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-icons-youtube">
+                <a href="http://www.youtube.com/" target="_blank" title="Youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <div class="custom-about-me-links bg-color-dark">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-3 text-center custom-xs-border-bottom p-0">
+                    <a data-hash href="#say-hello" class="text-decoration-none">
+                        <span class="custom-nav-button text-color-light">
+                            <i class="icon-earphones-alt icons text-color-primary"></i>
+                            İletişim Bilgileri
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-2 text-center custom-xs-border-bottom p-0">
+                    <a data-hash href="#say-hello" class="text-decoration-none">
+                        <span class="custom-nav-button custom-divisors text-color-light">
+                            <i class="icon-envelope-open icons text-color-primary"></i>
+                            Mesaj Gönder
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-3 text-center p-0">
+                    <a href="#" class="text-decoration-none">
+                        <span class="custom-nav-button text-color-light">
+                            <i class="icon-cloud-download icons text-color-primary"></i>
+                            Cv İndir
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section section-no-border bg-color-dark m-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    @await Component.InvokeAsync("PersonalDetailList")
+
+                    @await Component.InvokeAsync("AboutList")
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

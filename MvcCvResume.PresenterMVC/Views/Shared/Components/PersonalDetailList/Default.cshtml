@@ -1,0 +1,42 @@
+﻿@using MvcCvResume.Entities.Concrete
+@model List<PersonalDetail>
+<div class="custom-box-details bg-color-darken custom-box-shadow-1 col-lg-6 ms-5 mb-5 mb-lg-4 float-end clearfix">
+    <h4>Kişisel Bilgiler</h4>
+    @foreach (var i in Model)
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="custom-list-style-1 p-0 mb-0">
+                    <li>
+                        <span class="text-color-light">Doğum Tarihi :</span>
+                        <span class="custom-text-color-2">@i.BirthDate.Date.ToShortDateString()</span>
+                    </li>
+                    <li>
+                        <span class="text-color-light">Medeni Durum :</span>
+                        <span class="custom-text-color-2">@i.MartialStatus</span>
+                    </li>
+                    <li>
+                        <span class="text-color-light">Milliyet :</span>
+                        <span class="custom-text-color-2">@i.Nationality</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="custom-list-style-1 p-0 mb-0">
+                    <li>
+                        <span class="text-color-light">Ehliyet :</span>
+                        <span class="custom-text-color-2"><a class="custom-text-color-2" href="skype:yourskype?chat">@i.DrivingLicence</a></span>
+                    </li>
+                    <li>
+                        <span class="text-color-light">Telefon :</span>
+                        <span class="custom-text-color-2"><a class="custom-text-color-2" href="tel:123456789">@i.Phone</a></span>
+                    </li>
+                    <li>
+                        <span class="text-color-light">Kan Grubu :</span>
+                        <span class="custom-text-color-2"><a class="custom-text-color-2" href="mailto:me@domain.com">@i.BloodGroup</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>

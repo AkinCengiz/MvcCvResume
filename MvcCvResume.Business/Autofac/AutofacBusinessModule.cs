@@ -19,5 +19,15 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<EfIntroDal>().As<IIntroDal>();
         builder.RegisterType<AboutManager>().As<IAboutService>();
         builder.RegisterType<EfAboutDal>().As<IAboutDal>();
+        builder.RegisterType<PersonalDetailManager>().As<IPersonalDetailService>();
+        builder.RegisterType<EfPersonalDetailDal>().As<IPersonalDetailDal>();
+        builder.RegisterType<EducationManager>().As<IEducationService>();
+        builder.RegisterType<EfEducationDal>().As<IEducationDal>();
+        builder.RegisterType<ExperienceManager>().As<IExperienceService>();
+        builder.RegisterType<EfExperienceDal>().As<IExperienceDal>();
+        builder.RegisterType<SkillManager>().As<ISkillService>();
+        builder.RegisterType<EfSkillDal>().As<ISkillDal>();
+        builder.RegisterType<PortfolioManager>().As<IPortfolioService>();
+        builder.RegisterType<EfPortfolioDal>().As<IPortfolioDal>();
     }
 }

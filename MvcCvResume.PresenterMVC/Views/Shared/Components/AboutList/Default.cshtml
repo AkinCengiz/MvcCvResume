@@ -1,0 +1,25 @@
+﻿@using MvcCvResume.Entities.Concrete
+@model List<About>
+
+<h2 class="text-color-light font-weight-extra-bold text-uppercase">Hakkımda</h2>
+
+@foreach (var about in Model)
+{
+    @if (@about.Id == 1)
+    {
+        <p>@about.Description</p>
+        break;
+    }
+}
+<div class="about-me-more" id="aboutMeMore">
+    @foreach (var about in Model)
+    {
+        @if (@about.Id != 1)
+        {
+            <p>@about.Description</p>
+        }
+    }
+</div>
+
+
+<a id="aboutMeMoreBtn" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-1" href="#">Devamı...</a>

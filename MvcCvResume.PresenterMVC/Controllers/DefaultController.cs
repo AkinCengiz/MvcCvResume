@@ -2,6 +2,7 @@
 using MvcCvResume.Business.Abstract;
 
 namespace MvcCvResume.PresenterMVC.Controllers;
+
 public class DefaultController : Controller
 {
     private IIntroService _introService;
@@ -18,7 +19,8 @@ public class DefaultController : Controller
         return View(intro);
     }
 
-    public PartialViewResult AboutPartial()
-    {
-        return PartialView();
-    }
+    //public PartialViewResult AboutPartial()
+    //{
+    //    return PartialView();
+    //}
+}
