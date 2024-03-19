@@ -29,5 +29,11 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<EfSkillDal>().As<ISkillDal>();
         builder.RegisterType<PortfolioManager>().As<IPortfolioService>();
         builder.RegisterType<EfPortfolioDal>().As<IPortfolioDal>();
+        builder.RegisterType<BlogManager>().As<IBlogService>();
+        builder.RegisterType<EfBlogDal>().As<IBlogDal>();
+        builder.RegisterType<ContactManager>().As<IContactService>();
+        builder.RegisterType<EfContactDal>().As<IContactDal>();
+        builder.RegisterType<SocialAccountManager>().As<ISocialAccountService>();
+        builder.RegisterType<EfSocialAccountDal>().As<ISocialAccountDal>();
     }
 }

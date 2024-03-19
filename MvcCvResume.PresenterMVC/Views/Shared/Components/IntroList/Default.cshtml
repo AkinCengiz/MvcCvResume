@@ -13,16 +13,13 @@
                         <span class="custom-about-me-infos">
                             <span class="text-color-primary font-weight-bold text-uppercase">@a.Graduation</span>
                             <span class="text-color-primary font-weight-bold text-uppercase mb-3">Information Technology &amp; Services</span>
-                            <span class="custom-text-color-3 text-uppercase">
-                                <strong class="text-color-light">Previous: </strong>
-                                Front-End Developer at Porto
-                                <a data-hash href="#experience" class="btn btn-tertiary text-uppercase custom-btn-style-1 text-1 ms-2">Devamı...</a>
-                            </span>
+                            @await Component.InvokeAsync("ContactIntro")
+                            @await Component.InvokeAsync("ExperienceIntro")
                             @await Component.InvokeAsync("EducationIntro")
                         </span>
                     </div>
                     <div class="col-lg-2 col-xl-3 d-none d-lg-block">
-                        <img src="/HTML/img/demos/resume/about-me/sfw2.jpeg" custom-anim class="img-fluid custom-image-pos-1" alt style="opacity:.5" />
+                        <img src="/HTML/img/demos/resume/about-me/sfw2.jpeg" custom-anim class="img-fluid custom-image-pos-1" alt style="opacity:.7" />
                     </div>
                 </div>
             </div>
